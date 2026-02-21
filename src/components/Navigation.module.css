@@ -1,0 +1,125 @@
+.header {
+  background: var(--navy);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.4);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logo:hover { text-decoration: none; }
+
+.logoIcon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoMain {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: white;
+}
+
+.logoSub {
+  font-size: 0.7rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressPill {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.modeToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: all var(--transition);
+  white-space: nowrap;
+  min-height: 44px;
+}
+
+.modeChallenge {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+.modeChallenge:hover {
+  background: var(--gold-dark);
+}
+
+.modeExploration {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border-color: rgba(255,255,255,0.4);
+}
+
+.modeExploration:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.modeLabel {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .modeLabel { display: inline; }
+}
+
+@media (min-width: 640px) {
+  .inner { padding: 0 1.5rem; }
+  .logoMain { font-size: 1.05rem; }
+  .logoSub { font-size: 0.72rem; }
+}
+
+@media (min-width: 1024px) {
+  .inner { padding: 0 2rem; }
+}
