@@ -1,0 +1,56 @@
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.5rem;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  z-index: 9999;
+  border: 2px solid transparent;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: calc(100vw - 2rem);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+}
+
+.success {
+  border-color: var(--success);
+  color: #065f46;
+  background: var(--success-light);
+}
+
+.error {
+  border-color: var(--error);
+  color: #991b1b;
+  background: var(--error-light);
+}
+
+.info {
+  border-color: var(--navy);
+  color: var(--navy);
+  background: #eff6ff;
+}
+
+.icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.msg {
+  line-height: 1.4;
+}

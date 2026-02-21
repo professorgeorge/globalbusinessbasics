@@ -1,0 +1,82 @@
+.scene {
+  width: 100%;
+  min-height: 160px;
+  perspective: 800px;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  outline: none;
+}
+
+.scene:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-lg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius-lg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.front {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: white;
+}
+
+.back {
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+  color: var(--navy-dark);
+  transform: rotateY(180deg);
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.termText {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.defText {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.hint {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .termText { font-size: 1.1rem; }
+  .defText { font-size: 1rem; }
+}
